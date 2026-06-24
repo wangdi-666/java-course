@@ -5,7 +5,6 @@ import com.experiment05.entity.College;
 import com.experiment05.entity.Student;
 import com.experiment05.entity.Teacher;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseUtils {
@@ -29,13 +28,10 @@ public class DatabaseUtils {
         Student s4 = new Student(201104,"张扬", 2011);
         s4.setTeacher(t2);
 
-        List<Student> students = new ArrayList<>();
-        students.add(s1); students.add(s2);
-        students.add(s3); students.add(s4);
-        return students;
+        return List.of(s1,s2, s3, s4);
     }
 
-    public static List<Student> getStudents() {
+    public static List<Student> listStudents() {
         return STUDENTS;
     }
 
